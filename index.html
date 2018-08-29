@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Exploring DOM Elements and Events</title>
+		<meta charset="UTF-8" />
+		<!--
+		<script type="application/javascript" src="./page-script.js"></script>
+		-->
+	</head>
+	<body>
+		<div id="wrapper">
+			<form name="myForm">
+				<h2 id="title">Page 1</h2>
+				<a href="./index.html">Page 1</a>
+				<a href="./index2.html">Page 2</a>
+				<a href="./index3.html">Page 3</a><br>
+				<input type="button" onclick="startInt()" value="Start" />
+				<input type="button" onclick="clearInt()" value="Stop" /><br><br>
+				<input type="text" id="url" name="url" value="https://www.google.com" />
+				<input type="button" onclick="goUrl()" value="Go to URL" />
+				<input type="button" onclick="myValue()" value="Value" />
+			</form>
+		</div>
+		<script type="text/javascript">
+			let output = document.getElementById("wrapper");
+
+			function goUrl() {
+				let url = document.getElementById("url").value;
+				window.location = url;
+			}
+
+			function myValue() {
+				document.getElementById("wrapper").innerText = document.myForm.url.value;
+
+			}
+
+
+
+
+
+
+			//output.innerHTML = navigator.userAgent;
+			/*
+			window.setTimeout(updateTitle, 10000);
+
+			let myTimer;
+			function startInt() {
+				myTimer = window.setInterval(myPopup, 1000);
+			}
+			function myPopup() {
+				alert("Hi!");
+			}
+			function clearInt() {
+				window.clearInterval(myTimer);
+			}
+
+			function updateTitle() {
+				document.getElementById("title").textContent = "Welcome to my webpage :)";
+			}
+			*/
+
+			/*
+			function goBack() {
+				window.history.go(-1);
+			}
+			console.dir(window);
+			for (let prop in window) {
+				document.write(`${prop}: ${window[prop]}`+ "<br>" );
+			}
+			output.textContent += window.innerHeight + "x" + window.innerWidth;
+			output.innerHTML += "<br>File location: " + window.location + "<br><br>";
+			let newWindow = window.open("index2.html");
+			newWindow.onbeforeunload = function() {
+				alert("Do not go anywhere!");
+			}
+			*/
+		</script>
+	</body>
+</html>

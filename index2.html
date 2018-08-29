@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Page 2</title>
+		<meta charset="UTF-8" />
+		<!--
+		<script type="application/javascript" src="./page-script.js"></script>
+		-->
+	</head>
+	<body onload="myFunOnLoad()">
+		<a href="./index3.html">Page 3</a>
+
+		<div id="wrapper2">
+			<form name="myForm2">
+				<h2 id="title2">Page 2</h2>
+				<input type="button" id="id1" value="click 1" />
+				<input type="button" id="id2" value="click 2" />
+				<input type="button" id="id3" value="click 3" />
+			</form>
+		</div>
+		<script type="text/javascript">
+			//let output = document.getElementById("wrapper2");
+			//document.getElementById("id1").onclick = myFun;
+			function myFunOnLoad() {
+				document.getElementById("title2").textContent = "Welcome to my webpage!";
+
+			}
+
+
+
+
+/*
+			function myFun() {
+				//console.dir(t);
+				//document.getElementById("title2").innerHTML = t.value;
+				//t.value = "CLICKED!";
+				//console.log(this);
+				document.getElementById("title2").textContent = `WORKED! Button ${this.value} was clicked`;
+				this.value = "CLICKED!";
+			}
+*/
+		</script>
+	</body>
+</html>

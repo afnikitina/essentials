@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Page 3</title>
+		<meta charset="UTF-8" />
+		<!--
+		<script type="application/javascript" src="./page-script.js"></script>
+		-->
+	</head>
+	<body>
+		<div>
+			<h2 id="title3">Page 3</h2>
+		<a href="./index2.html">Page 2</a><br><br>
+		<img src="http://via.placeholder.com/350x150/222/fff?text=Image1" id="imgSwap" onmouseover="changeImg(this)" onmouseout="backImg(this)"/>
+		</div>
+		<script type="text/javascript">
+			let imgHolder1 = "http://via.placeholder.com/350x150/222/fff?text=Image1";
+			let imgHolder2 = "http://via.placeholder.com/350x150/ff0000/fff?text=Image2";
+			function message(m) {
+				document.getElementById("title3").textContent = m;
+			}
+			function changeImg(t) {
+				message(t.src);
+				t.src = imgHolder2;
+			}
+			function backImg(t) {
+				message(t.src);
+				t.src = imgHolder1;
+			}
+
+
+
+		</script>
+
+	</body>
+</html>
